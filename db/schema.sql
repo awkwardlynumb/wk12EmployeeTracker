@@ -1,20 +1,20 @@
 create database employees;
 use employees;
-create table department (
+create table departments (
     id int auto_increment,
-    name varchar,
+    name varchar(15),
     primary key (id)
 );
 
-create table role (
+create table roles (
     id int auto_increment,
     title varchar,
     salary int,
-    department int,
+    department_id int,
     primary key (id)
 );
 
-create table employee (
+create table employees (
     id int auto_increment,
     first_name varchar(20),
     last_name varchar(30),
