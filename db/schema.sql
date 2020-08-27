@@ -1,3 +1,4 @@
+drop database if exists employees;
 create database employees;
 use employees;
 create table departments (
@@ -8,7 +9,7 @@ create table departments (
 
 create table roles (
     id int auto_increment,
-    title varchar,
+    title varchar(15),
     salary int,
     department_id int,
     primary key (id)
@@ -22,4 +23,3 @@ create table employees (
     manager_id int,
     primary key (id)
 )
-
