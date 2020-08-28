@@ -14,7 +14,7 @@ values
 ("Treasure", "Best", 1, 14),
 ("Jazmine", "Pedals", 1, 13),
 ("Tammy", "Thornton", 1, 15),
-("John", "Holmberg", 2, 13),
+("Jon", "Holmberg", 2, 13),
 ("Skril", "Lex", 2, 14),
 ("Levi", "Sumoe", 2, 15),
 ("Brenda", "Baddie", 3, 15),

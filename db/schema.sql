@@ -22,4 +22,4 @@ create table employees (
     role_id int,
     manager_id int,
     primary key (id)
-)
+);
