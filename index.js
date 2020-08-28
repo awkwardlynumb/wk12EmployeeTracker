@@ -127,7 +127,6 @@ async function addDepartment() {
 
 async function addRole() {
   const departmentsArr = await connection.query("select * from departments");
-  console.log(departmentsArr);
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -173,7 +172,6 @@ async function addEmployee() {
   for (let i = 0; i < empArr.length; i++) {
     namesArr.push(empArr[i].first_name);
   }
-  console.log(namesArr);
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -239,6 +237,7 @@ async function editDepartment() {
     (err) => {
       if (err) throw err;
       console.log("Department edited successfully");
+      end();
     }
   );
 }
@@ -274,7 +273,6 @@ async function editRole() {
   const empId = await connection.query(
     "select id from employees where first_name = '" + answers.empName + "';"
   );
-  console.log(empId)
   connection.query(
     "update employees set role_id = ? where id = ?",
     [roleId[0].id, empId[0].id],
